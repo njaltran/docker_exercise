@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Titanic{% endblock %}
+{% block content %}
+    <h1>Titanic dataset</h1>
+    <p>Survival statistics from the Titanic passenger dataset.</p>
+
+    <h2>Survival rate by gender</h2>
+    <img src="data:image/png;base64,{{ chart }}" alt="Survival rate by gender bar chart">
+
+    <h2>First 10 passengers</h2>
+    {{ table | safe }}
+{% endblock %}
